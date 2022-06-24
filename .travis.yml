@@ -29,16 +29,16 @@ deploy:
     local_dir: deploy
     wait-until-deployed: true
 
-  - provider: codedeploy
-      access_key_id: $AWS_ACCESS_KEY
-      secret_access_key: $AWS_SECRET_KEY
-      bucket: mdo-springboot-webservice-build
-      key: aws.zip
-      bundle_type: zip
-      application: springboot-webservice
-      deployment_group: springboot-webservice-group
-      region: ap-northeast-2
-      wait-until-deployed: true
+#  - provider: codedeploy
+#      access_key_id: $AWS_ACCESS_KEY
+#      secret_access_key: $AWS_SECRET_KEY
+#      bucket: mdo-springboot-webservice-build
+#      key: aws.zip
+#      bundle_type: zip
+#      application: springboot-webservice
+#      deployment_group: springboot-webservice-group
+#      region: ap-northeast-2
+#      wait-until-deployed: true
 
 notification:
   email:
