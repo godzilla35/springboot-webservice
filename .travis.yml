@@ -29,14 +29,14 @@ deploy:
     local_dir: deploy
 
   - provider: codedeploy
-      access_key_id: $AWS_ACCESS_KEY
-      secret_access_key: $AWS_SECRET_KEY
-      bucket: mdo-springboot-webservice-build
-      key: aws.zip
-      bundle_type: zip
-      application: springboot-webservice
-      deployment_group: springboot-webservice-group
-      region: ap-northeast-2
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: mdo-springboot-webservice-build
+    region: ap-northeast-2
+    key: aws.zip
+    application: springboot-webservice
+    deployment_group: springboot-webservice-group
+    bundle_type: zip
 
 notification:
   email:
