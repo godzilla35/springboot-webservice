@@ -33,8 +33,8 @@ chmod +x $JAR_NAME
 
 echo "> $JAR_NAME 실행"
 
-nohup java -jar \
-    -Dspring.config.location=classpath:/application.properties,classpath:/application-real.properties,/home/ec2-user/app/application-oauth.properties,/home/ec2-user/app/application-real-db.properties \
-    -Dspring.profiles.active=real \
-    -Dspring.config.use-legacy-processing=true \
-    $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
+nohup java -jar  aws-0.0.1-SNAPSHOT.jar --spring.config.location=\
+      optional:classpath:/application-real.properties,\
+      optional:classpath:/home/ec2-user/app/application-real-db.properties,\
+      optional:classpath:/home/ec2-user/app/application-outh.properties \
+      $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
